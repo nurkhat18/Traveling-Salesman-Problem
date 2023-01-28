@@ -1,6 +1,5 @@
 /**
  * Author: Nurkhat Jumabaev
- * Course: CS210
  * FileName: DGraph.java
  *
  * This class is used to create a directed graph.
@@ -182,80 +181,5 @@ public class DGraph {
         }
         return tspCost;
     }
-
-    /**
-     * this method is very similar to the tspBacktracking but optimized version.
-     * @param start
-     * @param minPath
-     * @return
-     */
-    public double tspMine(int start, List<Integer> minPath){
-        ArrayList<Integer> path = new ArrayList<>();
-        path.add(start);
-
-        double currCost = 0;
-        // here using heuristic cost as max cost to optimize the backtracking method.
-        double tspHeuristic = tspHeuristic(start, minPath);
-        boolean[] visited = new boolean[numVertices];
-        return tspMine(start, path, minPath, visited, currCost, tspHeuristic);
-
-    }
-
-    /**
-     * this method is very similar to the tspBacktracking but optimized version.
-     * @param start
-     * @param path
-     * @param minPath
-     * @param visited
-     * @param currCost
-     * @param tspHeuristic
-     * @return
-     */
-    double tspMine(int start, List<Integer> path, List<Integer> minPath, boolean[] visited, double currCost, double tspHeuristic){
-        visited[start-1] = true;
-
-        // this code adds the weight
-        // from last vertices to the starting vertices to the currCost.
-        if (path.size() == numVertices){
-            int lastVert = path.get(path.size() - 1);
-            int index = -1;
-            for (int i = 0; i <adjList.get(lastVert-1).size(); i++){
-                if (adjList.get(lastVert-1).get(i).label == 1){
-                    index = i;
-                    break;
-                }
-            }
-            currCost += adjList.get(lastVert - 1).get(index).weight;
-
-            // if there is a path with better cost.
-            if (currCost <= tspHeuristic){
-                tspHeuristic = currCost;
-                for (int i = 0; i < path.size(); i++){
-                    minPath.add(path.get(i));
-                }
-
-            }
-        }
-        else{
-            for (int i = 0; i < adjList.get(start-1).size(); i++){
-                int v = adjList.get(start - 1).get(i).label;
-                double w = adjList.get(start -1).get(i).weight;
-                if(!visited[v - 1]){
-                    path.add(v);
-                    currCost += w;
-                    // if cost is already bigger than the heuristic
-                    if (currCost > tspHeuristic) {
-                        break;
-                    }
-                    tspHeuristic = tspBacktracking(v, path, minPath, visited, tspHeuristic, currCost);
-                    visited[v - 1] = false;
-                    path.remove(path.size() - 1);
-                    currCost -= w;
-                }
-            }
-        }
-        return tspHeuristic;
-    }
-
 }
 
