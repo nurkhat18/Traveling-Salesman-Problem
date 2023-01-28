@@ -1,9 +1,8 @@
 /**
  * Author: Nurkhat Jumabaev
- * Course: CS210
- * FileName: PA11Main.java
+ * FileName: Main.java
  *
- * this class is the main class for the PA7
+ * this class is the main class for the Travelling Salesman Problem
  * the class is used to read the file and create a DGraph
  * and perform the tasks based on the given command.
  */
@@ -20,7 +19,7 @@ import java.io.FileNotFoundException;
  * and the second one will be the command such as
  * HEURISTIC.
  */
-public class PA11Main {
+public class Main {
     
     public static void main(String[] args) throws FileNotFoundException {
         // used to round the cost to one decimal
@@ -108,17 +107,7 @@ public class PA11Main {
                 minPath.add(path.get(i));
             }
             System.out.println("visitOrder = " + minPath);
-        } else if (args[1].equals("MINE")) {
-            List<Integer> path = new ArrayList<>();
-            System.out.print("cost = " + df.format(dGraph.tspBacktracking(1, path)) + ", ");
-
-            List<Integer> minPath = new ArrayList<>();
-            int startIndex = path.size() - numVertices;
-            for (int i = startIndex; i < path.size(); i++){
-                minPath.add(path.get(i));
-            }
-            System.out.println("visitOrder = " + minPath);
-        }
+        } 
     }
 
 }
