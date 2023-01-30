@@ -42,14 +42,14 @@ cost = 10.0, visitOrder = [1, 2, 3]
 
 The assignment can be partitioned into five main tasks:
 
-**1) The Graph**
+### 1) The Graph
 
 A weighted directed graph is needed to represent the ‘cities’ and their distances. The graph
 should support operations that will be needed by the algorithms, mainly a method to find all
 vertices that are adjacent to a given vertex. The graph class should be in **DGraph.java**.
 
 
-**2) The Heuristic Approach**
+### 2) The Heuristic Approach
 
 A simple way to arrive at an approximate solution to the TSP is to traverse the graph and at
 each vertex that you arrive at, make a decision about which way to go based on the weights of
@@ -57,7 +57,7 @@ the incident edges. A simple ‘heuristic’ or rule-of-thumb is to take the edg
 
 The heuristic approach is implemented as a **method in the DGraph class**.
 
-**3) The Backtracking Approach**
+### 3) The Backtracking Approach
 
 Recursive backtracking is a general approach to solving problems that can be represented with
 a graph. It involves exploring a possible solution, recording its value, and then backing up to the
@@ -66,7 +66,7 @@ previous vertex to make a different decision and record the value of that soluti
 The backtracking approach is implemented as a **method in the DGraph class**.
 
 
-**5) Timing**
+### 5) Timing
 
 The output for the TIME command should look as follows:
 
