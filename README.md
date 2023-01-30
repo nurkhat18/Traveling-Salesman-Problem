@@ -1,7 +1,7 @@
 # The Traveling Salesman Problem
 
 
-**Overview**
+## Overview
 
 The traveling salesman problem (TSP): given a set of cities and the distances between each,
 what is the shortest path that visits each city once and returns to the starting city? The problem
@@ -13,7 +13,7 @@ solved. Applications of the TSP include: vehicle routing, scheduling, integrated
 DNA sequencing and the tracking of stars. This assignment involves the implementation of a
 program to experiment with some basic solutions to the TSP and to time their performance.
 
-**Assignment**
+## Assignment
 
 A program is needed to take as input a directed weighted graph which represents a network of
 cities in a TSP. The graph is stored in a file and the filename is given to the program as a
