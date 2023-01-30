@@ -73,5 +73,4 @@ The backtracking approach is implemented as a **method in the DGraph class**.
 The output for the TIME command should look as follows:
 
 heuristic: cost = 935.3299999999999, 0 milliseconds
-mine: cost = 935.3299999999999, 0 milliseconds
 backtrack: cost = 835.8799999999999, 5 milliseconds
