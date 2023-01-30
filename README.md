@@ -1,6 +1,6 @@
 # The Traveling Salesman Problem
 
-![TSP Image](https://www.google.com/url?sa=i&url=https%3A%2F%2Fmedium.com%2Fivymobility-developers%2Ftraveling-salesman-problem-9ab623c88fab&psig=AOvVaw1_RpfiPRMMHfg2DcHhe492&ust=1675148785634000&source=images&cd=vfe&ved=0CA8QjRxqFwoTCNjfwNTd7vwCFQAAAAAdAAAAABAE)
+![TSP Image](https://blog-cdn.route4me.com/2019/12/16606fe4-traveling-salesman.jpg)
 
 
 ## Overview
